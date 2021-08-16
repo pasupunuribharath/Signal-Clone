@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from "./screens/LoginScreen"
+import RegsiterScreen from './screens/RegsiterScreen';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -21,7 +22,8 @@ const globleScreenOptions ={
   return (
     <NavigationContainer>
     <Stack.Navigator screenOptions ={globleScreenOptions}>
-    <Stack.Screen options={{title : "'lets SignUp"}} name='Login' component={LoginScreen} />
+    <Stack.Screen  name='Login' component={LoginScreen} />
+    <Stack.Screen name='Register' component={RegsiterScreen} />
     </Stack.Navigator>
     </NavigationContainer>
   );
